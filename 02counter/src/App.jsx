@@ -3,17 +3,31 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+//Hooks are used for UI Updation
+
+
 function App() {
  
-  let counter=0
+  //let counter=0
 
+  let [counter , setCounter ]= useState(15)
   const addvalue=()=>{
-      counter++;
+
       console.log("Value increemented ",Math.random()*10);
+      //counter=counter+1
+      //setCounter(counter+1)
+
+      if(counter<20)
+        setCounter(counter+1);
   }
   const reducevalue=()=>{
-      counter++;
+  
       console.log("Value Decreemented ",Math.random()*10);
+      //setCounter(counter-1);
+      if(counter>0)
+       setCounter(counter-1);
+
+      //setcounter(counter);
   }
   return (
     <>
